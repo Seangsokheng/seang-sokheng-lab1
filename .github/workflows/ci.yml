@@ -24,3 +24,12 @@ jobs:
         run: yarn lint 
       - name: Run tests 
         run: yarn test
+      - name: Run tests with coverage
+        run: yarn test
+
+      - name: Upload coverage report
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/

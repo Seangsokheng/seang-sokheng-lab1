@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --exit",
+    "test": "nyc mocha",
     "lint": "eslint . --ext .js"
   },
   "keywords": [],
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
-    "globals": "^16.4.0"
+    "globals": "^16.4.0",
+    "nyc": "^17.1.0"
   }
 }
